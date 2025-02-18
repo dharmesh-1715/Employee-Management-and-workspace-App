@@ -24,3 +24,4 @@
   
   --Learns from past interactions for more relevant and customized responses.
 
+![Screenshot 2025-02-18 212434](https://github.com/user-attachments/assets/1d7544ef-97e5-416c-8fec-3b049ca80233)
