@@ -1,16 +1,15 @@
-# flutter_application_2
+# Employee workspace and management App 
 
-A new Flutter project.
+1.Employee Authentication & Role-Based Access
+  Secure login system where employees, managers, and admins have different levels of access based on their roles.
+2.Attendance Tracking
+  Employees can check in and check out, with timestamps recorded automatically for accurate attendance tracking.
+3.Leave Management
+  Employees can apply for leaves, track approval status, and managers can approve/reject leave requests.
+4.Task & Project Management
+  Managers can assign tasks and projects, track their progress, and employees can update the status of assigned tasks.
+5.Notifications & Announcements
+  Sends push notifications and in-app messages for important updates like meetings, deadlines, and HR announcements.
+6.AI Chatbot Features
+  Learns from past interactions for more relevant and customized responses.
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
