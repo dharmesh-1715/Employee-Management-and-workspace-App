@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2/EntryPage/EntryPage.dart';
+import 'package:lottie/lottie.dart';
 
 class splashscreen extends StatefulWidget {
   const splashscreen({super.key});
@@ -32,9 +33,9 @@ class _MyWidgetState extends State<splashscreen> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image(image: AssetImage('assets/animations/workspace.png'),height: 200,width: 200,),
-              SizedBox(height: 15,),
-              Text("WorkSpace.com",style: TextStyle(fontSize: 35,color: Colors.black,fontWeight: FontWeight.w700),),
+              Lottie.asset('assets/animations/splash_animation.json',height: 250,width: 250,),
+             // SizedBox(height: 10,),
+              Text("WorkSpace",style: TextStyle(fontSize: 35,color: Colors.black,fontWeight: FontWeight.w700),),
             ],
           ),
         ),

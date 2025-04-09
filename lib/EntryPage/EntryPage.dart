@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_application_2/Login/LoginPage.dart';
+import 'package:flutter_application_2/Employee/LoginPage.dart';
+import 'package:flutter_application_2/EntryPage/RoleBasedLogin.dart';
 import 'package:flutter_application_2/Signup/SignupPage.dart';
 import 'package:lottie/lottie.dart';
 
@@ -54,7 +55,7 @@ class EntryPage extends StatelessWidget {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => LoginPage()),
+                    MaterialPageRoute(builder: (context) => BlankPage()),
                   );
                 },
                 child: Text('Login',style: TextStyle(fontSize: 15,color: Colors.black),),

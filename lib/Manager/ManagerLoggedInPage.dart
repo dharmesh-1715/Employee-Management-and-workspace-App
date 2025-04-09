@@ -1,17 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter_application_2/EntryPage/EntryPage.dart';
-import 'package:flutter_application_2/Login/log%20in%20time/Log_in_time.dart';
-import 'package:flutter_application_2/Login/profile/profile.dart';
-import 'notifications.dart';
+import 'package:flutter_application_2/Employee/Log_in_time.dart';
+import 'package:flutter_application_2/Employee/notifications.dart';
+import 'package:flutter_application_2/Employee/profile.dart';
+import 'package:flutter_application_2/Manager/ManagerFeedbacks.dart';
+import 'package:flutter_application_2/Manager/ManagerMeetingsPage.dart';
+import 'package:flutter_application_2/Manager/ManagerProjectsPage.dart';
 
-class LogoutPage extends StatelessWidget {
+class Manager_LogoutPage extends StatelessWidget {
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
   final String userId; // User ID to uniquely identify the user
   final String username;
   
   // Accept the username and userId as parameters
-  LogoutPage({required this.userId, required this.username});
+  Manager_LogoutPage({required this.userId, required this.username});
 
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
 
@@ -90,12 +93,16 @@ class LogoutPage extends StatelessWidget {
                       'Welcome, $username',
                       style: TextStyle(fontSize: 18),
                     ),
+                    Text(
+                      'Role : Manager',
+                      style: TextStyle(fontSize: 14,fontWeight: FontWeight.bold),
+                    ),
                     SizedBox(height: 10),
                     Text(
                       'How\'s the josh?',
                       style: TextStyle(fontSize: 14),
                     ),
-                    SizedBox(height: 10),
+    
                     Text(
                       'Success starts with a positive mindset and relentless effort!',
                       style: TextStyle(fontSize: 14),
@@ -135,16 +142,16 @@ class LogoutPage extends StatelessWidget {
               ),
 
               ListTile(
-                title: Text('Tasks'),
+                title: Text('Projects'),
                 leading: Icon(Icons.task),
                 onTap: () {
-                  // Perform logout action and log the logout time
-                  // Navigator.push(
-                  //   context,
-                  //   MaterialPageRoute(
-                  //     builder: (context) => LoginTimePage(userId: userId),
-                  //   ),
-                  // );
+                
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => TasksPage(),
+                    ),
+                  );
                 },
               ),
 
@@ -156,7 +163,7 @@ class LogoutPage extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => LoginTimePage(userId: userId),
+                      builder: (context) => ManagerMeeting(),
                     ),
                   );
                 },
@@ -198,7 +205,7 @@ class LogoutPage extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => LoginTimePage(userId: userId),
+                      builder: (context) => M_FeedbackPage(),
                     ),
                   );
                 },
